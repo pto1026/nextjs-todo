@@ -14,7 +14,7 @@ export default function Home({ todos }) {
       <div className='container'>
         <h1 className='display-1'>Todo-app</h1>
         <ul className='list-group'>
-          {todos.map(todo => <li key={todo._id} className='list-group-item'>{todo.title}<br />{todo.description}<br />{todo.status}</li>)}
+          {todos._embedded.todos.map(todo => <li key={todo.description} className='list-group-item'>{todo.title}<br />{todo.description}<br />{todo.status}</li>)}
         </ul>
       </div>
   )
